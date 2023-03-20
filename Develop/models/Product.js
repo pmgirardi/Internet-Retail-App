@@ -15,7 +15,7 @@ Product.init(
     // Doesn't allow null values.
       allowNull: false,
     // Set as primary key.
-      primaryKey: false,
+      primaryKey: true,
     // Uses auto increment.
       autoIncrement: true
     },
