@@ -19,7 +19,7 @@ Tag.init(
     },
     tag_name: {
   // String.
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
   },
   {
