@@ -4,8 +4,7 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // The `/api/products` endpoint
 
 // get all products
-// find all products
-// be sure to include its associated Category and Tag data
+
 router.get('/', async (req, res) => {
   try {
     const productData = await Product.findAll({
@@ -17,8 +16,7 @@ router.get('/', async (req, res) => {
 });
 
 // get one product
-// find a single product by its `id`
-// be sure to include its associated Category and Tag data
+
 router.get('/:id', async (req, res) => {
   try {
   const productData = await Product.findOne({
@@ -36,28 +34,6 @@ router.get('/:id', async (req, res) => {
 });
 
   // create new product
- /* req.body should look like this...
-    {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
-  
- try {
-    const productData = await Product.create
-    (req.body, {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1,2,3,4],
-    },
-    res.status(200).json(productData));
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
-*/
-    // if there's product tags, we need to create pairings to bulk create in the ProductTag model
 
 router.post('/', async (req, res) => {
  
